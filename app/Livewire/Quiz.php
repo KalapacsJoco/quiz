@@ -2,43 +2,42 @@
 
 namespace App\Livewire;
 
-use Livewire\Attributes\Layout;
 use Livewire\Component;
 
 class Quiz extends Component
 {
-
     public $questions = [];
     public $currentIndex = 0;
-    public $currentQuestion =0;
+    public $currentQuestion = null;
     public $score = 0;
     public $selectedAnswer = null;
+    public $showNextButton = false;
 
-    public function mount(){
-        $getQuestions =include resource_path('views/components/questions.php');
+    public function mount()
+    {
+        $getQuestions = include resource_path('views/components/questions.php');
         $this->questions = $getQuestions(10);
-        // dd($questions); 
-
     }
 
-    public function check($index){
-        // dd($index,);
+    public function check($index)
+    {
         if ($index == $this->currentQuestion['answer']) {
-            $this->score ++;
-           
-
+            $this->score++;
         }
-        // dd($this->score);
+
+        // Engedélyezzük a "Következő kérdés" gombot
+        $this->showNextButton = true;
     }
 
-    public function nextQuestion() {
+    public function nextQuestion()
+    {
         $this->currentIndex++;
+        $this->showNextButton = false; // Gomb elrejtése az új kérdésnél
     }
 
     public function render()
     {
         $this->currentQuestion = $this->questions[$this->currentIndex] ?? null;
-        // dd($this->currentQuestion);
         return view('livewire.quiz', ['currentQuestion' => $this->currentQuestion]);
     }
 }

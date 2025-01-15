@@ -19,7 +19,6 @@
             </style>
         @endif
         @livewireStyles
-        <script src="//unpkg.com/alpinejs" defer></script>
 
         
     </head>
