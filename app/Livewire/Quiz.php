@@ -13,13 +13,16 @@ class Quiz extends Component
     public $score = 0;
     public $selectedAnswer = null;
     public $showNextButton = false;
+    public $questionCounter = 1;
 
     public function mount()
     {
+        // A kérdések véletlenszerű kiválasztása, ismétlődés elkerülésével
         $this->questions = Question::with('options')
             ->inRandomOrder() // Véletlenszerű sorrend
-            ->limit(10) // Csak 10 kérdés kiválasztása
             ->get()
+            ->unique('id') // Ismétlődő kérdések elkerülése
+            ->take(10) // Csak 10 kérdés kiválasztása
             ->map(function ($question) {
                 return [
                     'question' => $question->question,
@@ -30,6 +33,7 @@ class Quiz extends Component
             ->toArray();
     }
     
+    
 
     public function check($index)
     {
@@ -38,6 +42,7 @@ class Quiz extends Component
         if ($index == $this->currentQuestion['answer']) {
             $this->score++;
         }
+
 
         // Engedélyezzük a "Következő kérdés" gombot
         $this->showNextButton = true;
@@ -48,10 +53,13 @@ class Quiz extends Component
         $this->currentIndex++;
         $this->selectedAnswer = null;
         $this->showNextButton = false; // Gomb elrejtése az új kérdésnél
+        $this->questionCounter++;
+
     }
 
     public function render()
     {
+        
         $this->currentQuestion = $this->questions[$this->currentIndex] ?? null;
         return view('livewire.quiz', ['currentQuestion' => $this->currentQuestion]);
     }
