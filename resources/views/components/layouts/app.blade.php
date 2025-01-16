@@ -22,7 +22,7 @@
 
         
     </head>
-    <body>
+    <body class="w-full h-screen flex items-center flex-col justify-center">
         {{ $slot }}
     @livewireScripts
     </body>

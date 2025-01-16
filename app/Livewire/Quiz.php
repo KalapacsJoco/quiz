@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Question;
 use Livewire\Component;
 
 class Quiz extends Component
@@ -15,12 +16,25 @@ class Quiz extends Component
 
     public function mount()
     {
-        $getQuestions = include resource_path('views/components/questions.php');
-        $this->questions = $getQuestions(10);
+        $this->questions = Question::with('options')
+            ->inRandomOrder() // Véletlenszerű sorrend
+            ->limit(10) // Csak 10 kérdés kiválasztása
+            ->get()
+            ->map(function ($question) {
+                return [
+                    'question' => $question->question,
+                    'options' => $question->options->pluck('text')->toArray(),
+                    'answer' => $question->correct_option
+                ];
+            })
+            ->toArray();
     }
+    
 
     public function check($index)
     {
+        $this->selectedAnswer = $index;
+        // dd($this->currentQuestion);
         if ($index == $this->currentQuestion['answer']) {
             $this->score++;
         }
@@ -32,6 +46,7 @@ class Quiz extends Component
     public function nextQuestion()
     {
         $this->currentIndex++;
+        $this->selectedAnswer = null;
         $this->showNextButton = false; // Gomb elrejtése az új kérdésnél
     }
 
