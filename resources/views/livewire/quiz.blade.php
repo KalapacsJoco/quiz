@@ -1,10 +1,28 @@
-<div x-dada="{ show: @entangle('showNextButton'), disabled: false }" class="w-2/3 mx-auto bg-white shadow-md rounded-lg p-6">
+<div x-dada="{ 
+show: @entangle('showNextButton'), 
+disabled: false, 
+removeWrongAnswers() {
+let correctAnswerIndex = {{ $currentQuestion['answer'] }};
+        let options = {{ json_encode($currentQuestion['options']) }};
+        
+        // Véletlenszerűen eltávolítunk két rossz választ
+        let wrongAnswers = options.filter((option, index) => index !== correctAnswerIndex);
+        let wrongAnswersToRemove = wrongAnswers.slice(0, 2); // Két rossz válasz eltávolítása
+
+        // Frissíteni kell a vizuális megjelenítést az eltávolított válaszokkal
+        // Ez a rész beállítható úgy, hogy a nem helyes válaszokat eltüntesse a képernyőről
+        console.log('Eltávolított válaszok: ', wrongAnswersToRemove);
+        
+        // Az eltávolított válaszokat nem jelenítjük meg
+        this.selectedAnswer = correctAnswerIndex;}
+ }" class="w-2/3 mx-auto bg-white shadow-md rounded-lg p-6">
    <div class="mb-4">
       <div class="text-lg font-semibold text-gray-700">Kérdés {{ $questionCounter }} / 10</div>
       <progress x-bind:value="{{ $questionCounter }}" max="10" class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
          <div class="bg-blue-500 h-full"></div>
       </progress>
       <div class="mt-2 text-sm text-gray-500">Eddigi pontszám: <span class="font-medium text-gray-700">{{ $score }}</span></div>
+      <div @click="removeWrongAnswers()">Rossz válaszok eltávolítása</div>
    </div>
    @if ($currentQuestion)
    <div class="mb-6">
@@ -14,7 +32,7 @@
       @foreach ($currentQuestion['options'] as $index => $option)
       <div
          x-bind:class="{
-               'border-4 border-green-700': {{ $index === $currentQuestion['answer'] ? 'disabled' : 'false' }},
+               'border-4 border-green-500': {{ $index === $currentQuestion['answer'] ? 'disabled' : 'false' }},
                'bg-green-500 text-white': {{ $selectedAnswer === $index && $index === $currentQuestion['answer'] ? 'true' : 'false' }},
                'bg-red-500 text-white': {{ $selectedAnswer === $index && $index !== $currentQuestion['answer'] ? 'true' : 'false' }},
                'opacity-50 pointer-events-none': disabled

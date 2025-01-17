@@ -11,307 +11,192 @@ class QuestionsTableSeeder extends Seeder
     public function run()
     {
         $questions = [
+
             [
-                "question" => "Mi a víz vegyjele?",
-                "options" => ["H2O", "CO2", "NaCl", "O2"],
-                "answer" => 0 // H2O
+                'question' => 'Melyik évben fedezte fel Amerika partjait Kolumbusz Kristóf?',
+                'options' => ['1492', '1485', '1501', '1512'],
+                'answer' => 0
             ],
             [
-                "question" => "Ki festette a Mona Lisát?",
-                "options" => ["Vincent van Gogh", "Leonardo da Vinci", "Michelangelo", "Pablo Picasso"],
-                "answer" => 1 // Leonardo da Vinci
+                'question' => 'Ki volt az ókori Egyiptom legismertebb női fáraója?',
+                'options' => ['Nefertiti', 'Kleopátra', 'Hatsepszut', 'Ankhesenamun'],
+                'answer' => 2
             ],
             [
-                "question" => "Melyik a Föld legnagyobb óceánja?",
-                "options" => ["Atlanti-óceán", "India-óceán", "Csendes-óceán", "Jeges-tenger"],
-                "answer" => 2 // Csendes-óceán
+                'question' => 'Melyik csata döntötte el Napóleon sorsát 1815-ben?',
+                'options' => ['Austerlitz', 'Borogyinó', 'Waterloo', 'Leipzig'],
+                'answer' => 2
             ],
             [
-                "question" => "Ki írta a 'Pál utcai fiúk' című regényt?",
-                "options" => ["Ady Endre", "Molnár Ferenc", "Jókai Mór", "Kosztolányi Dezső"],
-                "answer" => 1 // Molnár Ferenc
+                'question' => 'Ki írta az Amerikai Függetlenségi Nyilatkozatot?',
+                'options' => ['Benjamin Franklin', 'George Washington', 'Thomas Jefferson', 'John Adams'],
+                'answer' => 2
             ],
             [
-                "question" => "Mi az emberi test legnagyobb szerve?",
-                "options" => ["Tüdő", "Szív", "Bőr", "Máj"],
-                "answer" => 2 // Bőr
+                'question' => 'Melyik városban gyújtották fel a híres Alexandriai Könyvtárat?',
+                'options' => ['Róma', 'Athén', 'Konstantinápoly', 'Alexandria'],
+                'answer' => 3
             ],
             [
-                "question" => "Melyik bolygó a Naprendszer legnagyobb bolygója?",
-                "options" => ["Föld", "Mars", "Szaturnusz", "Jupiter"],
-                "answer" => 3 // Jupiter
+                'question' => 'Melyik dinasztia uralkodott Kínában a Nagy Fal építésekor?',
+                'options' => ['Ming', 'Tang', 'Han', 'Qin'],
+                'answer' => 3
             ],
             [
-                "question" => "Mikor volt az 1848-as forradalom és szabadságharc kezdete Magyarországon?",
-                "options" => ["Március 15.", "Április 4.", "Október 6.", "November 7."],
-                "answer" => 0 // Március 15.
+                'question' => 'Melyik uralkodó hozta létre az Orosz Birodalmat?',
+                'options' => ['II. Katalin', 'Nagy Péter', 'Rettegett Iván', 'Mihail Romanov'],
+                'answer' => 1
             ],
             [
-                "question" => "Milyen színnel jelöljük a cinket a periódusos rendszerben?",
-                "options" => ["Fehér", "Kék", "Piros", "Sárga"],
-                "answer" => 1 // Kék
+                'question' => 'Ki volt a Római Birodalom első császára?',
+                'options' => ['Julius Caesar', 'Augustus', 'Nero', 'Tiberius'],
+                'answer' => 1
             ],
             [
-                "question" => "Melyik ország fővárosa Stockholm?",
-                "options" => ["Norvégia", "Svédország", "Finnország", "Dánia"],
-                "answer" => 1 // Svédország
+                'question' => 'Melyik háború ért véget a Versailles-i békeszerződéssel?',
+                'options' => ['Első világháború', 'Második világháború', 'Krími háború', 'Francia–porosz háború'],
+                'answer' => 0
             ],
             [
-                "question" => "Melyik magyar költő írta a 'Himnusz' szövegét?",
-                "options" => ["Arany János", "Petőfi Sándor", "Vörösmarty Mihály", "Kölcsey Ferenc"],
-                "answer" => 3 // Kölcsey Ferenc
+                'question' => 'Melyik ország területén található a Grand Canyon?',
+                'options' => ['Mexikó', 'Kanada', 'USA', 'Brazília'],
+                'answer' => 2
             ],
             [
-                "question" => "Melyik kontinensen található az Amazonas esőerdő?",
-                "options" => ["Afrika", "Dél-Amerika", "Ázsia", "Ausztrália"],
-                "answer" => 1 // Dél-Amerika
+                'question' => 'Melyik óceán mossa Japán partjait?',
+                'options' => ['Atlanti-óceán', 'Indiai-óceán', 'Jeges-tenger', 'Csendes-óceán'],
+                'answer' => 3
             ],
             [
-                "question" => "Melyik évben volt az első holdraszállás?",
-                "options" => ["1965", "1969", "1971", "1975"],
-                "answer" => 1 // 1969
+                'question' => 'Melyik országban található a híres fjordrendszer?',
+                'options' => ['Svédország', 'Norvégia', 'Finnország', 'Izland'],
+                'answer' => 1
             ],
             [
-                "question" => "Melyik vegyület felelős a növények zöld színéért?",
-                "options" => ["Klorofill", "Melanin", "Hemoglobin", "Keratin"],
-                "answer" => 0 // Klorofill
+                'question' => 'Melyik európai országban van a legtöbb tó?',
+                'options' => ['Svédország', 'Finnország', 'Oroszország', 'Norvégia'],
+                'answer' => 1
             ],
             [
-                "question" => "Ki írta az 'Egri csillagok' című regényt?",
-                "options" => ["Móricz Zsigmond", "Jókai Mór", "Gárdonyi Géza", "Krúdy Gyula"],
-                "answer" => 2 // Gárdonyi Géza
+                'question' => 'Melyik országban található a világ legmélyebb tava, a Bajkál-tó?',
+                'options' => ['Kína', 'Oroszország', 'Mongólia', 'Kazahsztán'],
+                'answer' => 1
             ],
             [
-                "question" => "Mi a világ legmagasabb hegye?",
-                "options" => ["K2", "Kilimandzsáró", "Everest", "Mont Blanc"],
-                "answer" => 2 // Everest
+                'question' => 'Melyik kontinensen helyezkedik el a Viktória-vízesés?',
+                'options' => ['Afrika', 'Ázsia', 'Dél-Amerika', 'Ausztrália'],
+                'answer' => 0
             ],
             [
-                "question" => "Melyik bolygót nevezik a 'vörös bolygónak'?",
-                "options" => ["Mars", "Jupiter", "Vénusz", "Szaturnusz"],
-                "answer" => 0 // Mars
+                'question' => 'Melyik ország fővárosa Damaszkusz?',
+                'options' => ['Jordánia', 'Irán', 'Szíria', 'Libanon'],
+                'answer' => 2
             ],
             [
-                "question" => "Ki volt az ókori görög mitológiában a tengerek istene?",
-                "options" => ["Zeusz", "Hádész", "Poszeidón", "Hermész"],
-                "answer" => 2 // Poszeidón
+                'question' => 'Melyik sportágban használnak ütőt és labdát, de nincs háló?',
+                'options' => ['Golf', 'Tenisz', 'Röplabda', 'Krikett'],
+                'answer' => 0
             ],
             [
-                "question" => "Hány szín van a szivárványban?",
-                "options" => ["5", "6", "7", "8"],
-                "answer" => 2 // 7
+                'question' => 'Melyik ország rendezte a 2016-os nyári olimpiai játékokat?',
+                'options' => ['Japán', 'Brazília', 'Kína', 'Egyesült Királyság'],
+                'answer' => 1
             ],
             [
-                "question" => "Mi a leghosszabb folyó a világon?",
-                "options" => ["Amazonas", "Nílus", "Jangce", "Mississippi"],
-                "answer" => 1 // Nílus
+                'question' => 'Melyik sportágban nyert Michael Phelps 23 olimpiai aranyérmet?',
+                'options' => ['Atlétika', 'Úszás', 'Tornasport', 'Kerékpározás'],
+                'answer' => 1
             ],
             [
-                "question" => "Melyik évben tört ki az első világháború?",
-                "options" => ["1912", "1914", "1916", "1918"],
-                "answer" => 1 // 1914
+                'question' => 'Melyik sportágban használják a "hole-in-one" kifejezést?',
+                'options' => ['Billiárd', 'Golf', 'Bowling', 'Tenisz'],
+                'answer' => 1
             ],
             [
-                "question" => "Melyik állat a magyar címerben látható?",
-                "options" => ["Sas", "Turul", "Oroszlán", "Medve"],
-                "answer" => 1 // Turul
+                'question' => 'Melyik ország futballválogatottja nyerte meg a 2018-as FIFA világbajnokságot?',
+                'options' => ['Németország', 'Franciaország', 'Brazília', 'Argentína'],
+                'answer' => 1
             ],
             [
-                "question" => "Hány bolygó van a Naprendszerben?",
-                "options" => ["7", "8", "9", "10"],
-                "answer" => 1 // 8
+                'question' => 'Hány játékos van egy kosárlabdacsapat kezdőjében?',
+                'options' => ['5', '6', '7', '8'],
+                'answer' => 0
             ],
             [
-                "question" => "Mi az elektron töltése?",
-                "options" => ["Pozitív", "Semleges", "Negatív", "Nem töltött"],
-                "answer" => 2 // Negatív
+                'question' => 'Melyik város híres a Wimbledon tenisztornáról?',
+                'options' => ['Párizs', 'New York', 'London', 'Melbourne'],
+                'answer' => 2
             ],
             [
-                "question" => "Ki írta az 'Odüsszeia' című művet?",
-                "options" => ["Szophoklész", "Platón", "Homérosz", "Arisztotelész"],
-                "answer" => 2 // Homérosz
+                'question' => 'Melyik sportágban található a kifejezés: "triple-double"?',
+                'options' => ['Baseball', 'Kosárlabda', 'Hoki', 'Tenisz'],
+                'answer' => 1
             ],
             [
-                "question" => "Melyik a leggyorsabb szárazföldi állat?",
-                "options" => ["Gepárd", "Oroszlán", "Antilop", "Tigris"],
-                "answer" => 0 // Gepárd
+                'question' => 'Melyik ország híres a sumóbirkózásról?',
+                'options' => ['Kína', 'Japán', 'Thaiföld', 'Dél-Korea'],
+                'answer' => 1
             ],
             [
-                "question" => "Melyik ország híres a Colosseumról?",
-                "options" => ["Görögország", "Olaszország", "Spanyolország", "Franciaország"],
-                "answer" => 1 // Olaszország
+                'question' => 'Melyik sportágban szerepel a Tour de France?',
+                'options' => ['Autóverseny', 'Kerékpározás', 'Síelés', 'Futás'],
+                'answer' => 1
             ],
             [
-                "question" => "Mi a Tejútrendszer központi égiteste?",
-                "options" => ["Nap", "Fekete lyuk", "Hold", "Szaturnusz"],
-                "answer" => 1 // Fekete lyuk
+                'question' => 'Melyik híres zeneszerző írta a "Für Elise" című művet?',
+                'options' => ['Wolfgang Amadeus Mozart', 'Ludwig van Beethoven', 'Johann Sebastian Bach', 'Franz Schubert'],
+                'answer' => 1
             ],
             [
-                "question" => "Hány oldala van egy szabályos háromszögnek?",
-                "options" => ["2", "3", "4", "5"],
-                "answer" => 1 // 3
+                'question' => 'Melyik hangszernek van 88 billentyűje?',
+                'options' => ['Hegedű', 'Gitár', 'Zongora', 'Hárfa'],
+                'answer' => 2
             ],
             [
-                "question" => "Melyik az emberi test legkisebb csontja?",
-                "options" => ["Üllő", "Kalapács", "Kengyel", "Lábközépcsont"],
-                "answer" => 2 // Kengyel
+                'question' => 'Melyik zenekar tagja volt Freddie Mercury?',
+                'options' => ['The Beatles', 'Queen', 'Pink Floyd', 'The Rolling Stones'],
+                'answer' => 1
             ],
             [
-                "question" => "Melyik ország fővárosa Tokió?",
-                "options" => ["Kína", "Japán", "Dél-Korea", "Vietnam"],
-                "answer" => 1 // Japán
+                'question' => 'Melyik énekesnő adta ki a "Like a Virgin" című slágert?',
+                'options' => ['Whitney Houston', 'Madonna', 'Mariah Carey', 'Celine Dion'],
+                'answer' => 1
             ],
             [
-                "question" => "Mi a Naprendszer legkisebb bolygója?",
-                "options" => ["Merkúr", "Mars", "Vénusz", "Plútó"],
-                "answer" => 0 // Merkúr
+                'question' => 'Melyik zenei műfajban alkotott Elvis Presley?',
+                'options' => ['Rock and Roll', 'Jazz', 'Blues', 'Klasszikus'],
+                'answer' => 0
             ],
             [
-                "question" => "Ki találta fel a telefonkészüléket?",
-                "options" => ["Thomas Edison", "Nikola Tesla", "Alexander Graham Bell", "Galileo Galilei"],
-                "answer" => 2 // Alexander Graham Bell
+                'question' => 'Melyik hangszer tartozik a vonós hangszerek közé?',
+                'options' => ['Trombita', 'Hegedű', 'Furulya', 'Zongora'],
+                'answer' => 1
             ],
             [
-                "question" => "Hány perc egy óra?",
-                "options" => ["50", "60", "70", "100"],
-                "answer" => 1 // 60
+                'question' => 'Melyik zenekar készítette a híres "Stairway to Heaven" című dalt?',
+                'options' => ['Led Zeppelin', 'The Doors', 'Deep Purple', 'Black Sabbath'],
+                'answer' => 0
             ],
             [
-                "question" => "Melyik híres épület található Párizsban?",
-                "options" => ["Big Ben", "Colosseum", "Eiffel-torony", "Sagrada Família"],
-                "answer" => 2 // Eiffel-torony
+                'question' => 'Melyik országban született a híres zeneszerző Antonio Vivaldi?',
+                'options' => ['Olaszország', 'Spanyolország', 'Ausztria', 'Franciaország'],
+                'answer' => 0
             ],
             [
-                "question" => "Hány szögletű egy szabályos hatszög?",
-                "options" => ["5", "6", "7", "8"],
-                "answer" => 1 // 6
+                'question' => 'Melyik zeneszerző írta a "Négy évszak" című művet?',
+                'options' => ['Johann Sebastian Bach', 'Ludwig van Beethoven', 'Antonio Vivaldi', 'Wolfgang Amadeus Mozart'],
+                'answer' => 2
             ],
             [
-                "question" => "Milyen gáz alkotja a Föld légkörének legnagyobb részét?",
-                "options" => ["Oxigén", "Szén-dioxid", "Hidrogén", "Nitrogén"],
-                "answer" => 3 // Nitrogén
-            ],
-            [
-                "question" => "Ki írta a 'Szent Péter esernyője' című regényt?",
-                "options" => ["Mikszáth Kálmán", "Jókai Mór", "Móricz Zsigmond", "Krúdy Gyula"],
-                "answer" => 0 // Mikszáth Kálmán
-            ],
-            [
-                "question" => "Melyik az emberi test legnagyobb csontja?",
-                "options" => ["Combcsont", "Karcsont", "Csípőcsont", "Gerinc"],
-                "answer" => 0 // Combcsont
-            ],
-            [
-                "question" => "Melyik városban található a Golden Gate híd?",
-                "options" => ["New York", "San Francisco", "Los Angeles", "Chicago"],
-                "answer" => 1 // San Francisco
-            ],
-            [
-                "question" => "Melyik híres tudós írta le a gravitáció törvényét?",
-                "options" => ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Nikola Tesla"],
-                "answer" => 1 // Isaac Newton
-            ],
-            [
-                "question" => "Melyik elem vegyjele az Au?",
-                "options" => ["Alumínium", "Arany", "Ezüst", "Higany"],
-                "answer" => 1 // Arany
-            ],
-            [
-                "question" => "Melyik évben történt a holdraszállás?",
-                "options" => ["1965", "1969", "1972", "1980"],
-                "answer" => 1 // 1969
-            ],
-            [
-                "question" => "Melyik földrész a legnagyobb területű?",
-                "options" => ["Afrika", "Ázsia", "Antarktisz", "Európa"],
-                "answer" => 1 // Ázsia
-            ],
-            [
-                "question" => "Melyik magyar várost nevezik a 'Királyok városának'?",
-                "options" => ["Debrecen", "Pécs", "Esztergom", "Székesfehérvár"],
-                "answer" => 3 // Székesfehérvár
-            ],
-            [
-                "question" => "Hány játékos van egy futballcsapat kezdő tizenegyében?",
-                "options" => ["9", "10", "11", "12"],
-                "answer" => 2 // 11
-            ],
-            [
-                "question" => "Melyik filmben szerepel a híres mondat: 'May the Force be with you'?",
-                "options" => ["Harry Potter", "Star Wars", "A Gyűrűk Ura", "A keresztapa"],
-                "answer" => 1 // Star Wars
-            ],
-            [
-                "question" => "Mi Magyarország leghosszabb folyója?",
-                "options" => ["Tisza", "Duna", "Rába", "Dráva"],
-                "answer" => 1 // Duna
-            ],
-            [
-                "question" => "Melyik ország zászlaja zöld, fehér és piros színű?",
-                "options" => ["Franciaország", "Olaszország", "Mexikó", "Írország"],
-                "answer" => 1 // Olaszország
-            ],
-            [
-                "question" => "Mi a világ legmagasabb hegye?",
-                "options" => ["K2", "Kilimandzsáró", "Everest", "Mont Blanc"],
-                "answer" => 2 // Everest
-            ],
-            [
-                "question" => "Melyik anyag vezeti a legjobban az elektromos áramot?",
-                "options" => ["Arany", "Réz", "Ezüst", "Vas"],
-                "answer" => 2 // Ezüst
-            ],
-            [
-                "question" => "Melyik ország híres a sushi-ról?",
-                "options" => ["Kína", "Japán", "Dél-Korea", "Thaiföld"],
-                "answer" => 1 // Japán
-            ],
-            [
-                "question" => "Melyik szerv pumpálja a vért az emberi testben?",
-                "options" => ["Agy", "Máj", "Tüdő", "Szív"],
-                "answer" => 3 // Szív
-            ],
-            [
-                "question" => "Milyen színű a 'STOP' közlekedési tábla?",
-                "options" => ["Kék", "Zöld", "Piros", "Sárga"],
-                "answer" => 2 // Piros
-            ],
-            [
-                "question" => "Melyik művész alkotta a 'Dávid-szobrot'?",
-                "options" => ["Leonardo da Vinci", "Michelangelo", "Raffaello", "Donatello"],
-                "answer" => 1 // Michelangelo
-            ],
-            [
-                "question" => "Hány hónap van egy évben?",
-                "options" => ["10", "11", "12", "13"],
-                "answer" => 2 // 12
-            ],
-            [
-                "question" => "Melyik ország zászlaja kék és sárga színű?",
-                "options" => ["Ukrajna", "Svédország", "Brazília", "Argentína"],
-                "answer" => 0 // Ukrajna
-            ],
-            [
-                "question" => "Melyik sportághoz kapcsolódik Lionel Messi?",
-                "options" => ["Kosárlabda", "Tenisz", "Futball", "Jégkorong"],
-                "answer" => 2 // Futball
-            ],
-            [
-                "question" => "Melyik állat adja a tejet, amelyből feta sajt készül?",
-                "options" => ["Tehén", "Kecske", "Bivaly", "Juh"],
-                "answer" => 3 // Juh
-            ],
-            [
-                "question" => "Melyik földrészhez tartozik Ausztrália?",
-                "options" => ["Európa", "Ázsia", "Óceánia", "Afrika"],
-                "answer" => 2 // Óceánia
-            ],
-            [
-                "question" => "Melyik híres tudós dolgozott ki három mozgástörvényt?",
-                "options" => ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Nikola Tesla"],
-                "answer" => 1 // Isaac Newton
+                'question' => 'Melyik énekesnő nyert 2021-ben Grammy-díjat az "év albuma" kategóriában a "Folklore" című albumával?',
+                'options' => ['Ariana Grande', 'Taylor Swift', 'Lady Gaga', 'Billie Eilish'],
+                'answer' => 1
             ]
-        ];
+            
+            
+            
+                    ];
+        
 
         foreach ($questions as $q) {
             $question = Question::create([

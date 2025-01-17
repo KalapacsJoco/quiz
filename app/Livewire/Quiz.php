@@ -17,21 +17,21 @@ class Quiz extends Component
 
     public function mount()
     {
-        // A kérdések véletlenszerű kiválasztása, ismétlődés elkerülésével
+        // Véletlenszerű kérdések kiválasztása egyediséget garantálva
         $this->questions = Question::with('options')
-            ->inRandomOrder() // Véletlenszerű sorrend
+            ->inRandomOrder()
+            ->limit(10) // Csak 10 rekordot kérünk le
             ->get()
-            ->unique('id') // Ismétlődő kérdések elkerülése
-            ->take(10) // Csak 10 kérdés kiválasztása
             ->map(function ($question) {
                 return [
                     'question' => $question->question,
                     'options' => $question->options->pluck('text')->toArray(),
-                    'answer' => $question->correct_option
+                    'answer' => $question->correct_option,
                 ];
             })
             ->toArray();
     }
+    
     
     
 

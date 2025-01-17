@@ -23,6 +23,10 @@
         
     </head>
     <body class="w-full h-screen flex items-center flex-col justify-center">
+        <nav>
+      
+
+        </nav>
         {{ $slot }}
     @livewireScripts
     </body>
